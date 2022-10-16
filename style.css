@@ -428,6 +428,7 @@ html{
 @media (max-width:900px) {
     .section-heading{
         font-size: 7rem;
+        
     }
     .navbar-link{
         margin:2rem;
@@ -439,5 +440,37 @@ html{
         font-size: 2rem;
     }
 }
+@media (max-width:700px) {
+    .section-heading{
+        font-size: 6rem;
+    }
 
+.section-1-icons i{
+    font-size: 20rem;
+}
+.menu{
+    left:2rem
+}
+.section-4{
+    height: 40rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.section-4-text{
+    margin-bottom: 8rem;
+}
+}
+@media (max-width:550px) {
+    html{
+        font-size: 40%;
+    }
+    .section-heading{
+        font-size: 4rem;
+    }
+    .navbar-link{
+        margin: 0 .7rem;
+    }
+   
+}
 /* End of Responsive */
