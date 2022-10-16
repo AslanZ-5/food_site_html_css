@@ -25,6 +25,11 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: top .4s ;
+}
+.navbar.change{
+    top:0;
+    transition: top .4s .2s;
 }
 .navbar-link{
     color:rgb(151, 146, 146);
@@ -35,6 +40,25 @@ html{
     justify-content: center;
     align-items: center;
     transition: color .5s;
+    opacity: 0;
+}
+.change .navbar-link{
+    opacity: 1;
+}
+.change .navbar-link:nth-child(1){
+    transition: opacity .4s .5s, color .5s;
+}
+.change .navbar-link:nth-child(2){
+    transition: opacity .4s .6s, color .5s;
+}
+.change .navbar-link:nth-child(3){
+    transition: opacity .4s .7s, color .5s;
+}
+.change .navbar-link:nth-child(4){
+    transition: opacity .4s .8s, color .5s;
+}
+.change .navbar-link:nth-child(5){
+    transition: opacity .4s .9s, color .5s;
 }
 .navbar-link:hover{
     color:#fff;
@@ -58,14 +82,20 @@ html{
     border-radius: 30rem 30rem 15rem 15rem;
     box-shadow: .1rem .1rem .1rem #000,-.1rem -.1rem .1rem #000;
     cursor:pointer;
+    transition: top .4s .2s;
 }
+.menu.change{
+    top:16rem;
+    transition: top .4s ;
+}
+
 .menu::before{
     content:"";
     width:.3rem;
-    height: 15rem;
+    height: 17rem;
     background-color: #000;
     position: absolute;
-    top: -15rem;
+    top:-17rem;
     left: calc(50% - .15rem);
     box-shadow: .1rem 0 .1rem #000;
 }
@@ -353,3 +383,61 @@ html{
     text-align: center;
 }
 /* End of Section 4 */
+/* Responsive */
+@media (max-width:1400px) {
+    html{
+        font-size: 50%;
+    }
+    .section-2{
+        height: auto;
+        padding: 10rem 0 14rem 0;
+        /* justify-content: space-around;
+        padding:0; */
+    }
+    .cards-container{
+        margin-top: 10rem;
+    }
+    .gallery-link{
+        width:40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+    .food-img{
+        width:100%;
+        height:100%;
+    }
+}
+@media (max-width:1000px){
+    .section-heading{
+        font-size: 9rem;
+        margin: 0 5rem;
+    }
+    .section-1-icons i{
+        font-size: 25rem;
+    }
+    .cards-container{
+        flex-wrap: wrap;
+    }
+    .card{
+        margin:5rem;
+    }
+    .section-4{
+        height: 30rem;
+    }
+}
+@media (max-width:900px) {
+    .section-heading{
+        font-size: 7rem;
+    }
+    .navbar-link{
+        margin:2rem;
+    }
+    .navbar-link i{
+        font-size: 5rem;
+    }
+    .navbar-link span{
+        font-size: 2rem;
+    }
+}
+
+/* End of Responsive */
